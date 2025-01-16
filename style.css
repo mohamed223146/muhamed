@@ -1,7 +1,7 @@
 /* تنسيق عام */
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.8;
+    line-height: 1.6; /* تقليل ارتفاع السطر */
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -13,7 +13,7 @@ body {
 /* قائمة التنقل */
 nav {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
-    padding: 15px 0;
+    padding: 10px 0; /* تقليل الحشو */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -28,15 +28,15 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: block; /* جعل القائمة عمودية */
+    margin: 5px 0; /* تقليل المسافة بين العناصر */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* تصغير حجم الخط */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -49,21 +49,21 @@ nav ul li a:hover {
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
-    padding: 200px 20px;
+    padding: 100px 10px; /* تقليل الحشو */
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
 header h1 {
-    font-size: 4.5rem;
+    font-size: 2rem; /* تصغير حجم العنوان الرئيسي */
     margin: 0;
     animation: fadeInDown 2s ease-in-out;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header p {
-    font-size: 2.2rem;
+    font-size: 1.2rem; /* تصغير حجم النص الفرعي */
     margin-top: 10px;
     animation: fadeInUp 3s ease-in-out;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,11 +71,11 @@ header p {
 
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px; /* تقليل المسافة من الأسفل */
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    font-size: 24px;
+    font-size: 20px; /* تصغير حجم الأيقونة */
     text-decoration: none;
     animation: bounce 2s infinite;
 }
@@ -98,71 +98,72 @@ header p {
 
 /* الأقسام */
 section {
-    margin: 80px 20px;
-    padding: 50px;
+    margin: 40px 10px; /* تقليل الهوامش */
+    padding: 20px; /* تقليل الحشو */
     background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* تقليل نصف القطر */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تقليل الظل */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* تقليل التأثير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* تقليل الظل */
 }
 
 section h2 {
     color: #007BFF;
-    font-size: 3rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem; /* تصغير حجم العناوين */
+    margin-bottom: 20px; /* تقليل المسافة */
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* قسم عني */
 .about-content {
     display: flex;
+    flex-direction: column; /* جعل العناصر عمودية */
     align-items: center;
-    gap: 40px;
+    gap: 20px; /* تقليل المسافة بين العناصر */
 }
 
 .avatar {
-    width: 200px;
-    height: 200px;
+    width: 100px; /* تصغير حجم الصورة الشخصية */
+    height: 100px;
     border-radius: 50%;
-    border: 4px solid #007BFF;
+    border: 3px solid #007BFF; /* تقليل سمك الحدود */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .avatar:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تقليل الظل */
 }
 
 /* قسم المهارات */
 .skills-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column; /* جعل العناصر عمودية */
+    gap: 20px; /* تقليل المسافة بين العناصر */
 }
 
 .skill {
-    flex: 1 1 calc(50% - 40px);
+    flex: 1 1 100%; /* جعل كل مهارة تأخذ العرض الكامل */
     background: #f9f9f9;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 20px; /* تقليل الحشو */
+    border-radius: 10px; /* تقليل نصف القطر */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* تقليل التأثير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* تقليل الظل */
 }
 
 .skill i {
-    font-size: 60px;
+    font-size: 40px; /* تصغير حجم الأيقونات */
     color: #007BFF;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* تقليل المسافة */
     transition: color 0.3s ease;
 }
 
@@ -171,22 +172,22 @@ section h2 {
 }
 
 .skill h3 {
-    font-size: 2rem;
-    margin: 20px 0;
+    font-size: 1.5rem; /* تصغير حجم العناوين */
+    margin: 10px 0; /* تقليل المسافة */
     color: #333;
 }
 
 .skill p {
     color: #666;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* تصغير حجم النصوص */
 }
 
 /* قسم وسائل التواصل الاجتماعي */
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
+    flex-direction: column; /* جعل العناصر عمودية */
+    gap: 10px; /* تقليل المسافة بين العناصر */
+    margin-top: 20px; /* تقليل المسافة */
 }
 
 .social-links a {
@@ -195,18 +196,18 @@ section h2 {
     align-items: center;
     color: #007BFF;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem; /* تصغير حجم الخط */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
     color: #0056b3;
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* تقليل التأثير */
 }
 
 .social-links i {
-    font-size: 60px;
-    margin-bottom: 10px;
+    font-size: 40px; /* تصغير حجم الأيقونات */
+    margin-bottom: 5px; /* تقليل المسافة */
     transition: transform 0.3s ease;
 }
 
@@ -217,63 +218,67 @@ section h2 {
 /* تذييل الصفحة */
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 20px; /* تقليل الحشو */
     background: linear-gradient(135deg, #333, #222);
     color: #fff;
-    margin-top: 80px;
+    margin-top: 40px; /* تقليل المسافة */
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* تصغير حجم الخط */
 }
 
 /* تصميم متجاوب للهواتف */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    header {
-        padding: 100px 10px;
+    body {
+        font-size: 12px; /* تصغير حجم الخط العام */
     }
 
     header h1 {
-        font-size: 3rem;
+        font-size: 1.8rem; /* تصغير حجم العنوان الرئيسي */
     }
 
     header p {
-        font-size: 1.8rem;
+        font-size: 1rem; /* تصغير حجم النص الفرعي */
     }
 
-    section {
-        margin: 40px 10px;
-        padding: 30px;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
+    section h2 {
+        font-size: 1.5rem; /* تصغير حجم العناوين داخل الأقسام */
     }
 
     .avatar {
-        width: 150px;
-        height: 150px;
+        width: 80px; /* تصغير حجم الصورة الشخصية */
+        height: 80px;
     }
 
-    .skills-grid {
-        flex-direction: column;
+    .skill h3 {
+        font-size: 1.2rem; /* تصغير حجم عناوين المهارات */
     }
 
-    .skill {
-        flex: 1 1 100%;
-        padding: 30px;
+    .skill p {
+        font-size: 0.8rem; /* تصغير حجم النصوص داخل المهارات */
     }
 
-    .social-links {
-        flex-direction: column;
-        gap: 20px;
+    .social-links i {
+        font-size: 30px; /* تصغير حجم الأيقونات */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* تصغير حجم النص في التذييل */
+    }
+
+    button {
+        padding: 6px 12px; /* تصغير حجم الأزرار */
+        font-size: 0.8rem; /* تصغير حجم النص داخل الأزرار */
+    }
+
+    .scroll-down {
+        display: none; /* إخفاء أيقونة التمرير لأسفل */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* تصغير حجم الروابط في القائمة */
     }
 }
