@@ -1,0 +1,279 @@
+/* تنسيق عام */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: right;
+    overflow-x: hidden; /* لمنع التمرير الأفقي */
+}
+
+/* قائمة التنقل */
+nav {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+    transform: translateY(-3px);
+}
+
+/* القسم الرئيسي */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 200px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    animation: fadeInDown 2s ease-in-out;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    animation: fadeInUp 3s ease-in-out;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* الأقسام */
+section {
+    margin: 80px 20px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #007BFF;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* قسم عني */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #007BFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* قسم المهارات */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skill {
+    flex: 1 1 calc(50% - 40px);
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill i {
+    font-size: 60px;
+    color: #007BFF;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.skill:hover i {
+    color: #0056b3;
+}
+
+.skill h3 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.skill p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* قسم وسائل التواصل الاجتماعي */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.social-links i {
+    font-size: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: scale(1.1);
+}
+
+/* تذييل الصفحة */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #333, #222);
+    color: #fff;
+    margin-top: 80px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 100px 10px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.8rem;
+    }
+
+    section {
+        margin: 40px 10px;
+        padding: 30px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill {
+        flex: 1 1 100%;
+        padding: 30px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
